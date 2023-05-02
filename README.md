@@ -1,8 +1,3 @@
-```
-Author:     Jeanmarco Allain
-
-```
-
 # Overview of functionality:
 Originally built for a friend, this code converts the JSON files used in Genshin Impact to .fx files 
 to be used in the MMDGenshin shader by Manashiku. 
