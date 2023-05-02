@@ -144,8 +144,8 @@ namespace Converter
 #define USE_VERTEXCOLOR_AO 
 #define USE_VERTEXCOLOR_RAMP_WIDTH   
 {writeBool(UseShadowRamp)}#define USE_RAMP_TEXTURE  
-#define SHADOW_RAMP_WIDTH {ShadowRampWidth.ToString("0.00")}f 
-#define SHADOW_LIGHT_AREA  {LightArea.ToString("0.00")}f 
+#define SHADOW_RAMP_WIDTH 0.1f 
+#define SHADOW_LIGHT_AREA  0.5f 
 #define FACE_SHADOW_SOFTNESS {FaceMapSoftness.ToString("0.00")}f
 #define FACE_LIGHTMAP ""sub/tex/Avatar_Girl_Tex_FaceLightmap.png"" // face map path
 #define USE_FACE_SHADOW_MAP
@@ -158,7 +158,7 @@ namespace Converter
 #define SHADOW_WARM_COLOR_1 float4({writeFourArray(FirstShadowMultColor)})
 #define SHADOW_COOL_COLOR_1 float4({writeFourArray(CoolShadowMultColor)})
 #define USE_SPECULAR_MAT
-#define SPECULAR_COLOR float4({writeFourArray(SpecularColor)})
+#define SPECULAR_COLOR float4({writeCustomSpecular()})
 // specular color is shared by all materials 
 #define SPECULAR_MULTI_1 {SpecMulti.ToString("0.00")}f
 #define SPECULAR_SHINE_1 {Shininess.ToString("0.00")}f
@@ -262,6 +262,12 @@ namespace Converter
             float b = (float)jo.GetValue("b");
             float a = (float)jo.GetValue("a");
             return $"{r.ToString("0.0000")}f, {g.ToString("0.0000")}f, {b.ToString("0.0000")}f, {a.ToString("0.0000")}f";
+        }
+        private String writeCustomSpecular() {
+            if (MaterialName.Contains("Hair")) {
+                return "(0.5f, 0.5f, 0.5f, 0.5f)";
+            }
+            return "(0.1f, 0.1f, 0.1f, 0.1f)";
         }
         private void extractGeneral()
         {

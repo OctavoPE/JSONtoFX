@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             bool UseNormals = false;
-            float outlineMulti = 1.0F;
+            float outlineMulti = 8.0F;
 
             while (true)
             {
@@ -22,7 +22,7 @@
                     {
                         UseNormals = true;
                     }
-                    Console.WriteLine("OPTIONAL: Enter a number to use as your outline multiplier: (default is 1):");
+                    Console.WriteLine("OPTIONAL: Enter a number to use as your outline multiplier: (default is 8):");
                     try
                     {
                         outlineMulti = float.Parse(Console.ReadLine());
