@@ -265,9 +265,9 @@ namespace Converter
         }
         private String writeCustomSpecular() {
             if (MaterialName.Contains("Hair")) {
-                return "(0.5f, 0.5f, 0.5f, 0.5f)";
+                return "0.5f, 0.5f, 0.5f, 0.5f";
             }
-            return "(0.1f, 0.1f, 0.1f, 0.1f)";
+            return "0.1f, 0.1f, 0.1f, 0.1f";
         }
         private void extractGeneral()
         {
