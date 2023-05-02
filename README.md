@@ -29,8 +29,8 @@ To respect intellectual property, the JSON files will *not* be provided. *Do not
 You can extract them from the game yourself or find them online.
 
 # Additional reading:
-https://github.com/Manashiku/MMDGenshin/wiki
-https://docs.google.com/document/d/1AxOFEiPqNvBOYcR5RFI4UzHg6z9tr8Ex7U1lIBVXFwU/edit
+Official Shader Wiki: https://github.com/Manashiku/MMDGenshin/wiki
+Table of JSON value conversion: https://docs.google.com/document/d/1AxOFEiPqNvBOYcR5RFI4UzHg6z9tr8Ex7U1lIBVXFwU/edit
 
 Thank you to @Manashiku https://twitter.com/manashiku and @MonoCereal https://twitter.com/monocereal
 
